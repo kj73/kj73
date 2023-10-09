@@ -1,0 +1,17 @@
+<!-- XML file that stores the games in the catalog -->
+<?xml version="1.0" encoding="UTF-8"?>
+<games>
+    <game title="VALORANT">
+        <genre>First person shooter, Hero shooter</genre>
+        <developer>Riot Games</developer>
+        <platforms>Windows</platforms>
+        <rating>80</rating>
+    </game>
+
+    <game title="Barotrauma">
+        <genre>Survival horror, Submarine simulator</genre>
+        <developer>Undertow Games</developer>
+        <platforms>Windows, Mac, Linux</platforms>
+        <rating>81</rating>
+    </game> 
+</games>
