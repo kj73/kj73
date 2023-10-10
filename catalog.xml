@@ -1,5 +1,5 @@
-<!-- XML file that stores the games in the catalog -->
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- XML file that stores the games in the catalog -->
 <games>
     <game title="VALORANT">
         <genre>First person shooter, Hero shooter</genre>
@@ -17,7 +17,7 @@
         <img_path>Images/barotraumaImage.jpg</img_path>
     </game>
 
-     <game title="Terraria">
+    <game title="Terraria">
         <genre>Action adventure, Sandbox</genre>
         <developer>Re-Logic</developer>
         <platforms>Windows, macOS, Linux, Android, iOS, Switch, PlayStation, Xbox</platforms>
@@ -88,7 +88,7 @@
         <rating>80</rating>
         <img_path>Images/counterStrikeImage.jpg</img_path>
     </game>
-    
+
     <game title="League of Legends">
         <genre>Multiplayer online battle arena</genre>
         <developer>Riot Games</developer>
@@ -119,7 +119,7 @@
         <platforms>Windows, macOS, Linux, PlayStation, Xbox</platforms>
         <rating>87</rating>
         <img_path>Images/rimworldImage.jpg</img_path>
-    </game> 
+    </game>
 
     <game title="Hearts of Iron IV">
         <genre>Grand strategy, Computer wargame</genre>
@@ -127,7 +127,7 @@
         <platforms>Windows, macOS, Linux</platforms>
         <rating>83</rating>
         <img_path>Images/heartsOfIronImage.jpg</img_path>
-    </game> 
+    </game>
 
     <game title="War Thunder">
         <genre>Vehicular combat</genre>
@@ -135,7 +135,7 @@
         <platforms>Windows, macOS, Linux, PlayStation, Xbox</platforms>
         <rating>81</rating>
         <img_path>Images/warThunderImage.jpg</img_path>
-    </game> 
+    </game>
 
     <game title="Microsoft Flight Simulator">
         <genre>Flight simulation</genre>
@@ -143,7 +143,7 @@
         <platforms>Windows, Xbox</platforms>
         <rating>91</rating>
         <img_path>Images/microsoftFlightSimulatorImage.jpg</img_path>
-    </game> 
+    </game>
 
     <game title="Project Zomboid">
         <genre>Open world, Survival</genre>
@@ -151,7 +151,7 @@
         <platforms>Windows, Linux</platforms>
         <rating>83</rating>
         <img_path>Images/projectZomboidImage.jpg</img_path>
-    </game> 
+    </game>
 
     <game title="Victoria 3">
         <genre>Grand strategy</genre>
@@ -159,5 +159,5 @@
         <platforms>Windows, macOS, Linux</platforms>
         <rating>83</rating>
         <img_path>Images/victoria3Image.jpg</img_path>
-    </game> 
+    </game>
 </games>

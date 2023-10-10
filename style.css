@@ -1,18 +1,29 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
 /*font for all text*/
-h1, h2, h3, h4, h5, p, li, th{
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+th {
     font-family: 'Roboto', sans-serif;
 }
+
 /*Resize the nav bar when the screen size is 1000px or less*/
 @media screen and (max-width: 1000px) {
-    #li {float: none;}
+    #li {
+        float: none;
+    }
 }
+
 .search-container {
     float: right;
-    padding:10px 10px 0px 0px;
+    padding: 10px 10px 0px 0px;
 }
 
 .footer {
@@ -36,13 +47,44 @@ button {
     background-color: #ff4fa4;
     padding: 20px 20px;
     text-align: center;
-    text-decoration:none;
+    text-decoration: none;
     font-size: 12pt;
     margin: 15px 2px;
     transition-duration: 0.1s;
     cursor: pointer;
-    border:none;
+    border: none;
 }
-button:hover{
+
+button:hover {
     background-color: #111;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border: 3px solid black;
+}
+
+.gameInfo {
+    padding: 4px;
+    margin: 5px;
+}
+
+.gameLink {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
 }
