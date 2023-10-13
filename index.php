@@ -9,23 +9,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div id="header">
-        <h1>Games Catalog</h1>
-        <button type="button">Search</button>
+        <h1 id="pageTitle">Games Catalog</h1>
+        <input type="text" id="searchBar" placeholder="Search query">
+        <button type="button" id="searchButton" onclick="changeSearchUI()">Search</button>
     </div>
+
+    <form id="sortingSection" method="GET">
+        <h4 class="sortingItem">Sort by:</h4>
+        <div class="sortingItem">
+            <label for="title">Title</label>
+            <input type="radio" id="title" name="sortOption" value="title">
+        </div>
+
+        <div class="sortingItem">
+            <label for="rating" class="sortingItem">Rating</label>
+            <input type="radio" id="rating" name="sortOption" value="rating" class="sortingItem">
+        </div>
+
+        <button type="submit">Sort</button>
+    </form>
 
     <div id="contentSection">
 
         <?php
         $fileName = "catalog.xml";
         if (file_exists($fileName)) {
+            $sortOption = $_GET['sortOption'] ?? "title";
             $gamesCatalog = simplexml_load_file($fileName);
+            $gamesCatalog = sortAllGames($gamesCatalog, $sortOption);
+            
             displayAllGames($gamesCatalog);
-        } 
-        else {
+        } else {
             exit("Failed to open file");
         }
 
@@ -42,24 +61,50 @@
 </html>
 
 <?php
-    function displayAllGames($gamesCatalog) {
-        foreach ($gamesCatalog as $game) {
-            $title = $game['title'];
-            $genre = $game->genre;
-            $developer = $game->developer;
-            $platforms = $game->platforms;
-            $rating = $game->rating;
-            $img_path = $game->img_path;
+function displayAllGames($gamesCatalog)
+{
+    echo "<div id=\"detailInfo\">";
+    echo "<h3 class=\"gameInfo\">Title</h4>";
+    echo "<h3 class=\"gameInfo\">Genre</h3>";
+    echo "<h3 class=\"gameInfo\">Developer</h3>";
+    echo "<h3 class=\"gameInfo\">Platforms</h3>";
+    echo "<h3 class=\"gameInfo\">Rating</h3>";
+    echo "</div>";
+    foreach ($gamesCatalog as $game) {
+        $title = $game['@attributes']['title'];
+        $genre = $game['genre'];
+        $developer = $game['developer'];
+        $platforms = $game['platforms'];
+        $rating = $game['rating'];
 
-            echo "<a href=\"gameDetails.php?title=$title\" class=\"gameLink\">";
-                echo "<div class=\"gameContainer\">";
-                    echo "<h4 class=\"gameInfo\">$title</h4>";
-                    echo "<p class=\"gameInfo\">$genre</p>";
-                    echo "<p class=\"gameInfo\">$developer</p>";
-                    echo "<p class=\"gameInfo\">$platforms</p>";
-                    echo "<p class=\"gameInfo\">$rating</p>";
-                echo "</div>";
-            echo "</a>";
-        }
+
+        echo "<a href=\"gameDetails.php?title=$title\" class=\"gameLink\">";
+        echo "<div class=\"gameContainer\">";
+        echo "<h4 class=\"gameInfo\">$title</h4>";
+        echo "<p class=\"gameInfo\">$genre</p>";
+        echo "<p class=\"gameInfo\">$developer</p>";
+        echo "<p class=\"gameInfo\">$platforms</p>";
+        echo "<p class=\"gameInfo\">$rating</p>";
+        echo "</div>";
+        echo "</a>";
     }
+}
+
+function sortAllGames($gamesCatalog, $sortOption) {
+    $gamesCatalog = json_decode(json_encode($gamesCatalog), true)['game'];
+
+    if ($sortOption == "title") {
+        usort($gamesCatalog, function($a, $b) {
+            return strcmp($a['@attributes']['title'], $b['@attributes']['title']);
+        });
+
+    }
+
+    elseif ($sortOption === "rating") {
+        usort($gamesCatalog, function($a, $b) {
+            return $b['rating'] <=> $a['rating']; 
+        });
+    }
+    return $gamesCatalog;
+}
 ?>

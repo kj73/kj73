@@ -10,7 +10,8 @@ h4,
 h5,
 p,
 li,
-th {
+th,
+label {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -41,15 +42,15 @@ body {
     text-align: center;
 }
 
-/*Buttons*/
+
 button {
     color: white;
     background-color: #ff4fa4;
-    padding: 20px 20px;
+    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
-    font-size: 12pt;
-    margin: 15px 2px;
+    font-size: 16px;
+    margin: 10px 2px;
     transition-duration: 0.1s;
     cursor: pointer;
     border: none;
@@ -62,29 +63,72 @@ button:hover {
 #header {
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    padding: 0 300px;
+
+    background-color: #56667A;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.gameLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+#contentSection {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
     margin: 0 auto;
 }
 
 .gameContainer {
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    margin: 0 auto;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
     border: 3px solid black;
+    padding: 5px;
+    margin: 10px 0 0 10px;
+}
+
+#detailInfo {
+    display: flex;
+    justify-content: space-between;
+    border: 0, 1px, 1px, 3px solid black;
+    padding: 5px;
+    margin: 10px 0 0 10px;
 }
 
 .gameInfo {
-    padding: 4px;
-    margin: 5px;
+    flex: 1;
+    padding: 0 10px;
 }
 
-.gameLink {
-    text-decoration: none; 
-    color: inherit; 
-    display: block; 
+.sortingItem {
+    display: inline;
+    padding: 0 10px;
+}
+
+#sortingSection {
+    background-color: #b88c9e;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+label,
+input {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#searchBar {
+    display: none;
+    font-size: 16px;
+    margin: 10px;
+}
+
+#sortingSection {
+    padding: 0;
 }
