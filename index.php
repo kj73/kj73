@@ -20,7 +20,7 @@
     <form method="POST">
         <div id="header">
             <h1 id="pageTitle">Games Catalog</h1>
-            <input type="text" id="searchBar" name="searchRequest" placeholder="Search query" value=<?php echo $searchbarEntry ?>>
+            <input type="text" id="searchBar" name="searchRequest" placeholder="Search query" value=<?php echo $searchbarEntry?>>
             <button type="submit" id="searchButton">Search</button>
         </div>
         <div id="sortingSection">
@@ -46,8 +46,14 @@
         if (file_exists($fileName)) {
             $sortOption = $_POST['sortOption'] ?? "title";
             $gamesCatalog = simplexml_load_file($fileName);
+            // Sort the games catalog first, then filter by what was searched for
             $gamesCatalog = sortAllGames($gamesCatalog, $sortOption);
             
+            // If the user entered something into the search bar, we want to search for just that title (after sorting it)
+            if ($searchbarEntry != "" && $searchbarEntry != null) {
+                $gamesCatalog = filterBySearch($gamesCatalog, $searchbarEntry);
+            }
+
             displayAllGames($gamesCatalog);
         } else {
             exit("Failed to open file");
@@ -110,6 +116,19 @@ function sortAllGames($gamesCatalog, $sortOption) {
             return $b['rating'] <=> $a['rating']; 
         });
     }
+
+    return $gamesCatalog;
+}
+
+function filterBySearch($gamesCatalog, $searchbarEntry) {
+
+    $searchbarEntry = strtolower($searchbarEntry);
+
+    $gamesCatalog = array_filter($gamesCatalog, function($a) use ($searchbarEntry) {
+        $title = strtolower($a['@attributes']['title']);
+        return strpos($title, $searchbarEntry) !== false;
+    });
+
     return $gamesCatalog;
 }
 ?>
