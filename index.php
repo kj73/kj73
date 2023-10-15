@@ -1,3 +1,7 @@
+<?php 
+    $searchbarEntry = $_POST['searchRequest'] ?? "";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,26 +16,27 @@
     <script src="script.js"></script>
 </head>
 
-<body>
-    <div id="header">
-        <h1 id="pageTitle">Games Catalog</h1>
-        <input type="text" id="searchBar" placeholder="Search query">
-        <button type="button" id="searchButton" onclick="changeSearchUI()">Search</button>
-    </div>
-
-    <form id="sortingSection" method="GET">
-        <h4 class="sortingItem">Sort by:</h4>
-        <div class="sortingItem">
-            <label for="title">Title</label>
-            <input type="radio" id="title" name="sortOption" value="title">
+<body>  
+    <form method="POST">
+        <div id="header">
+            <h1 id="pageTitle">Games Catalog</h1>
+            <input type="text" id="searchBar" name="searchRequest" placeholder="Search query" value=<?php echo $searchbarEntry ?>>
+            <button type="submit" id="searchButton">Search</button>
         </div>
+        <div id="sortingSection">
+            <h4 class="sortingItem">Sort by:</h4>
+            <div class="sortingItem">
+                <label for="title">Title</label>
+                <input type="radio" id="title" name="sortOption" value="title">
+            </div>
 
-        <div class="sortingItem">
-            <label for="rating" class="sortingItem">Rating</label>
-            <input type="radio" id="rating" name="sortOption" value="rating" class="sortingItem">
+            <div class="sortingItem">
+                <label for="rating" class="sortingItem">Rating</label>
+                <input type="radio" id="rating" name="sortOption" value="rating" class="sortingItem">
+            </div>
+
+            <button type="submit">Sort</button>
         </div>
-
-        <button type="submit">Sort</button>
     </form>
 
     <div id="contentSection">
@@ -39,7 +44,7 @@
         <?php
         $fileName = "catalog.xml";
         if (file_exists($fileName)) {
-            $sortOption = $_GET['sortOption'] ?? "title";
+            $sortOption = $_POST['sortOption'] ?? "title";
             $gamesCatalog = simplexml_load_file($fileName);
             $gamesCatalog = sortAllGames($gamesCatalog, $sortOption);
             
