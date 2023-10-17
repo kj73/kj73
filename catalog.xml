@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML file that stores the games in the catalog -->
+<games>
+    <game title="VALORANT">
+        <genre>First person shooter, Hero shooter</genre>
+        <developer>Riot Games</developer>
+        <platforms>Windows</platforms>
+        <rating>80</rating>
+        <img_path>Images/VALORANTImage.jpg</img_path>
+    </game>
+
+    <game title="Hollow Knight">
+        <genre>Metroidvania, Fighting game</genre>
+        <developer>Team Cherry</developer>
+        <platforms>Windows, macOS, Linux</platforms>
+        <rating>100</rating>
+        <img_path>Images/hollowKnightImage.jpg</img_path>
+    </game>
+
+    <game title="Barotrauma">
+        <genre>Survival horror, Submarine simulator</genre>
+        <developer>Undertow Games</developer>
+        <platforms>Windows, macOS, Linux</platforms>
+        <rating>81</rating>
+        <img_path>Images/barotraumaImage.jpg</img_path>
+    </game>
+
+    <game title="Terraria">
+        <genre>Action adventure, Sandbox</genre>
+        <developer>Re-Logic</developer>
+        <platforms>Windows, macOS, Linux, Android, iOS, Switch, PlayStation, Xbox</platforms>
+        <rating>83</rating>
+        <img_path>Images/terrariaImage.jpg</img_path>
+    </game>
+
+    <game title="The Binding of Isaac: Rebirth">
+        <genre>Indie, Roguelike</genre>
+        <developer>Nicalis</developer>
+        <platforms>Windows, Linux, Switch, PlayStation, Xbox</platforms>
+        <rating>86</rating>
+        <img_path>Images/bindingOfIsaacImage.jpg</img_path>
+    </game>
+
+    <game title="Baldur's Gate 3">
+        <genre>Role playing</genre>
+        <developer>Larian Studios</developer>
+        <platforms>Windows, macOS, PlayStation, Xbox</platforms>
+        <rating>96</rating>
+        <img_path>Images/baldursGateImage.jpg</img_path>
+    </game>
+
+    <game title="The Legend of Zelda: Breath of the Wild">
+        <genre>Action adventure</genre>
+        <developer>Nintendo</developer>
+        <platforms>Switch</platforms>
+        <rating>97</rating>
+        <img_path>Images/zeldaImage.jpg</img_path>
+    </game>
+
+    <game title="Minecraft">
+        <genre>Sandbox</genre>
+        <developer>Mojang Studios</developer>
+        <platforms>Windows, macOS, Linux, Android, iOS, Switch, PlayStation, Xbox</platforms>
+        <rating>93</rating>
+        <img_path>Images/minecraftImage.jpg</img_path>
+    </game>
+
+    <game title="Cyberpunk 2077">
+        <genre>Action, Role playing</genre>
+        <developer>CD Projekt Red</developer>
+        <platforms>Windows, PlayStation, Xbox</platforms>
+        <rating>86</rating>
+        <img_path>Images/cyberpunkImage.jpg</img_path>
+    </game>
+
+    <game title="Fallout 4">
+        <genre>Action, Role playing</genre>
+        <developer>Bethesda Game Studios</developer>
+        <platforms>Windows, PlayStation, Xbox</platforms>
+        <rating>84</rating>
+        <img_path>Images/falloutImage.jpg</img_path>
+    </game>
+
+    <game title="Among Us">
+        <genre>Social deduction</genre>
+        <developer>Innersloth</developer>
+        <platforms>Windows, Android, iOS, Switch, PlayStation, Xbox</platforms>
+        <rating>85</rating>
+        <img_path>Images/amongUsImage.jpg</img_path>
+    </game>
+
+    <game title="Counter-Strike 2">
+        <genre>Tactical shooter, First person shooter</genre>
+        <developer>Valve</developer>
+        <platforms>Windows, Linux</platforms>
+        <rating>80</rating>
+        <img_path>Images/counterStrikeImage.jpg</img_path>
+    </game>
+
+    <game title="League of Legends">
+        <genre>Multiplayer online battle arena</genre>
+        <developer>Riot Games</developer>
+        <platforms>Windows, macOS</platforms>
+        <rating>78</rating>
+        <img_path>Images/leagueOfLegendsImage.jpg</img_path>
+    </game>
+
+    <game title="Don't Starve">
+        <genre>Survival</genre>
+        <developer>Klei Entertainment</developer>
+        <platforms>Windows, Linux, Android, iOS, Switch, PlayStation, Xbox</platforms>
+        <rating>79</rating>
+        <img_path>Images/dontStarveImage.jpg</img_path>
+    </game>
+
+    <game title="Kerbal Space Program">
+        <genre>Space flight simulation</genre>
+        <developer>Squad</developer>
+        <platforms>Windows, macOS, Linux, PlayStation, Xbox</platforms>
+        <rating>88</rating>
+        <img_path>Images/kerbalSpaceProgramImage.jpg</img_path>
+    </game>
+
+    <game title="Rimworld">
+        <genre>Construction and management simulation</genre>
+        <developer>Ludeon Studios</developer>
+        <platforms>Windows, macOS, Linux, PlayStation, Xbox</platforms>
+        <rating>87</rating>
+        <img_path>Images/rimworldImage.jpg</img_path>
+    </game>
+
+    <game title="Hearts of Iron IV">
+        <genre>Grand strategy, Computer wargame</genre>
+        <developer>Paradox</developer>
+        <platforms>Windows, macOS, Linux</platforms>
+        <rating>83</rating>
+        <img_path>Images/heartsOfIronImage.jpg</img_path>
+    </game>
+
+    <game title="War Thunder">
+        <genre>Vehicular combat</genre>
+        <developer>Gaijin Entertainment</developer>
+        <platforms>Windows, macOS, Linux, PlayStation, Xbox</platforms>
+        <rating>81</rating>
+        <img_path>Images/warThunderImage.jpg</img_path>
+    </game>
+
+    <game title="Microsoft Flight Simulator">
+        <genre>Flight simulation</genre>
+        <developer>Asobo Studio</developer>
+        <platforms>Windows, Xbox</platforms>
+        <rating>91</rating>
+        <img_path>Images/microsoftFlightSimulatorImage.jpg</img_path>
+    </game>
+
+    <game title="Project Zomboid">
+        <genre>Open world, Survival</genre>
+        <developer>The Indie Stone</developer>
+        <platforms>Windows, Linux</platforms>
+        <rating>83</rating>
+        <img_path>Images/projectZomboidImage.jpg</img_path>
+    </game>
+
+    <game title="Victoria 3">
+        <genre>Grand strategy</genre>
+        <developer>Paradox</developer>
+        <platforms>Windows, macOS, Linux</platforms>
+        <rating>83</rating>
+        <img_path>Images/victoria3Image.jpg</img_path>
+    </game>
+</games>
